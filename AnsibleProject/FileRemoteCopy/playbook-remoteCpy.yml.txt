@@ -1,0 +1,15 @@
+-
+  name: Test connectivity to target (play 1)
+  hosts: target1
+  tasks:
+   -  name: Ping Test
+      ping:
+   -  name: Copy file to remote location
+      copy:
+       src: tmp/text.txt
+       dest: tmp/test.txt
+       owner: osboxes
+       group: osboxes
+       mode: u+rw,g-wx,o-rwx
+
+
